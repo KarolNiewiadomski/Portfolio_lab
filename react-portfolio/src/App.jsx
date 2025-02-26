@@ -1,18 +1,20 @@
-/* eslint-disable react/jsx-no-undef */
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
+      <Header />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          {/* <Route path="" element={< />} />
-          <Route path="" element={< />} />
-          <Route path="" element={< />} /> */}
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/logowanie" element={<Login />} />
+        <Route path="/rejestracja" element={<Register />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 
