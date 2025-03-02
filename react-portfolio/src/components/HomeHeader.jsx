@@ -4,7 +4,7 @@ import { Link as ScrollLink } from "react-scroll"; // Link to scroll
 
 const HomeHeader = () => {
   return (
-    <header>
+    <header id="HomeHeader">
       <div>
         <img src="" alt="stuff" />
       </div>
@@ -20,15 +20,19 @@ const HomeHeader = () => {
           <ScrollLink to="Start" smooth={true} duration={500}>
             Start
           </ScrollLink>
-          <ScrollLink to="About" smooth={true} duration={500}>
-            About
+
+          <ScrollLink to="Steps" smooth={true} duration={500}>
+            Steps
           </ScrollLink>
+
           <ScrollLink to="AboutUs" smooth={true} duration={500}>
             About us
           </ScrollLink>
-          <ScrollLink to="F&O" smooth={true} duration={500}>
-            Foundation & organisation
+
+          <ScrollLink to="FO" smooth={true} duration={500}>
+            Foundation & organisation {/* WhoWeHelp */}
           </ScrollLink>
+
           <ScrollLink to="Contact" smooth={true} duration={500}>
             Contact
           </ScrollLink>

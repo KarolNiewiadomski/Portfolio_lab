@@ -2,7 +2,7 @@ import React from "react";
 
 const ThreeColumns = () => {
   return (
-    <section>
+    <section id="ThreeColumns">
       <div>
         <h2>0</h2>
         <p>Given bags</p>
