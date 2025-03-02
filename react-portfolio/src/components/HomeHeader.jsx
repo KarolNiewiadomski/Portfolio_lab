@@ -16,7 +16,27 @@ const HomeHeader = () => {
         </nav>
 
         {/* Lower menu */}
-        <nav></nav>
+        <nav>
+          <ScrollLink to="Start" smooth={true} duration={500}>
+            Start
+          </ScrollLink>
+
+          <ScrollLink to="Steps" smooth={true} duration={500}>
+            Steps
+          </ScrollLink>
+
+          <ScrollLink to="AboutUs" smooth={true} duration={500}>
+            About us
+          </ScrollLink>
+
+          <ScrollLink to="FO" smooth={true} duration={500}>
+            Foundation & organisation {/* WhoWeHelp */}
+          </ScrollLink>
+
+          <ScrollLink to="Contact" smooth={true} duration={500}>
+            Contact
+          </ScrollLink>
+        </nav>
       </div>
     </header>
   );
