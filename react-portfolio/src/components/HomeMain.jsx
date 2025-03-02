@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MainSection = () => {
+const HomeMain = () => {
   return (
     <section>
       <h1>Start helping!</h1>
@@ -16,4 +16,4 @@ const MainSection = () => {
   );
 };
 
-export default MainSection;
+export default HomeMain;

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Link to change path
 import { Link as ScrollLink } from "react-scroll"; // Link to scroll
 
-const Header = () => {
+const HomeHeader = () => {
   return (
     <header>
       <div>
@@ -38,4 +38,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HomeHeader;
