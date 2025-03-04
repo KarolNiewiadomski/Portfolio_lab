@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Link to change path
 import { Link as ScrollLink } from "react-scroll"; // Link to scroll
+import HomeHeaderImg from "../Assets/Home-Hero-Image.jpg";
 
 const HomeHeader = () => {
   return (
     <header id="HomeHeader" className="home-header-container">
       <div>
-        <img src="./" alt="" />
+        <img
+          src={HomeHeaderImg}
+          alt="Gifts to Charity"
+          className="home-header-image"
+        />
       </div>
       <div>
         {/* Upper menu */}
