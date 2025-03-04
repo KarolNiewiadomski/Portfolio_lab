@@ -6,7 +6,7 @@ const HomeHeader = () => {
   return (
     <header id="HomeHeader" className="home-header-container">
       <div>
-        <img src="" alt="stuff" />
+        <img src="./" alt="" />
       </div>
       <div>
         {/* Upper menu */}
