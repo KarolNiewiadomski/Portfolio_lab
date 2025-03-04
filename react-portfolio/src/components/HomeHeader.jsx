@@ -4,7 +4,7 @@ import { Link as ScrollLink } from "react-scroll"; // Link to scroll
 
 const HomeHeader = () => {
   return (
-    <header id="HomeHeader">
+    <header id="HomeHeader" className="home-header-container">
       <div>
         <img src="" alt="stuff" />
       </div>

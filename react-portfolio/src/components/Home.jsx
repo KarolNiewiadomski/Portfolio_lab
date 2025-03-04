@@ -6,7 +6,6 @@ import Steps from "./Steps";
 import AboutUs from "./AboutUs";
 import WhoWeHelp from "./WhoWeHelp";
 import Contact from "./Contact";
-import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -20,7 +19,6 @@ const Home = () => {
           <AboutUs />
           <WhoWeHelp />
           <Contact />
-          <Footer />
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HomeMain = () => {
   return (
-    <section id="">
+    <section id="HomeMain">
       <h1>Start helping!</h1>
       <h2>Give back unwanted stuff in trusted hands</h2>
       <Link to="/Login">
