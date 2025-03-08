@@ -1,6 +1,5 @@
 import React from "react";
 import HomeHeader from "./HomeHeader";
-import HomeMain from "./HomeMain";
 import ThreeColumns from "./ThreeColumns";
 import Steps from "./Steps";
 import AboutUs from "./AboutUs";
@@ -13,7 +12,6 @@ const Home = () => {
       <div>
         <div>
           <HomeHeader />
-          <HomeMain />
           <ThreeColumns />
           <Steps />
           <AboutUs />

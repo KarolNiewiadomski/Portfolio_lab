@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Link to change path
 import { Link as ScrollLink } from "react-scroll"; // Link to scroll
 import HomeHeaderImg from "../Assets/Home-Hero-Image.jpg";
+import HomeMain from "./HomeMain";
 
 const HomeHeader = () => {
   return (
@@ -43,6 +44,8 @@ const HomeHeader = () => {
           </ScrollLink>
         </nav>
       </div>
+
+      <HomeMain />
     </header>
   );
 };
