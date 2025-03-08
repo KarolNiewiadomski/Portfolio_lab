@@ -68,6 +68,10 @@
           &:hover {
             color: #000000;
           }
+
+          &:focus {
+            border: 0.75px solid #3c3c3c;
+          }
         }
       }
     }
