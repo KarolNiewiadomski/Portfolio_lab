@@ -1,3 +1,4 @@
+@import "../fonts";
 @import "../colors";
 
 .home-header-container {
@@ -6,6 +7,7 @@
   align-items: center;
   width: 100%;
   position: relative;
+  font-family: $font-base;
 
   .header-left {
     flex: 1;
@@ -32,19 +34,40 @@
 
     nav {
       display: flex;
-      gap: 15px;
+      gap: 20px;
 
       &:first-of-type {
-        margin-bottom: 10px;
+        // (Upper menu)
+        margin-bottom: 15px;
+
+        a {
+          text-decoration: none;
+          color: #737373;
+          transition: color 0.3s ease;
+          font-size: 14px;
+
+          &:hover {
+            color: #3c3c3c;
+            border: 1px solid #fad648;
+          }
+
+          &:focus {
+            border: 0.75px solid #fad648;
+          }
+        }
       }
 
-      a {
-        text-decoration: none;
-        color: #737373;
-        transition: color 0.3s ease;
-
-        &:hover {
+      &:last-of-type {
+        // (Lower menu)
+        a {
+          text-decoration: none;
           color: #3c3c3c;
+          transition: color 0.3s ease;
+          font-size: 18px;
+
+          &:hover {
+            color: #000000;
+          }
         }
       }
     }
