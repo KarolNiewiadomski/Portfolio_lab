@@ -6,22 +6,22 @@ import HomeHeaderImg from "../Assets/Home-Hero-Image.jpg";
 const HomeHeader = () => {
   return (
     <header id="HomeHeader" className="home-header-container">
-      <div>
+      <div className="header-left">
         <img
           src={HomeHeaderImg}
           alt="Gifts to Charity"
           className="home-header-image"
         />
       </div>
-      <div>
+      <div className="header-right">
         {/* Upper menu */}
-        <nav>
+        <nav className="upper-nav">
           <Link to="/Login">Log in</Link>
           <Link to="/Register">Register</Link>
         </nav>
 
         {/* Lower menu */}
-        <nav>
+        <nav className="lower-nav">
           <ScrollLink to="Start" smooth={true} duration={500}>
             Start
           </ScrollLink>
