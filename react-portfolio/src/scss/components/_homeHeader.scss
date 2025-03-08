@@ -45,14 +45,16 @@
           color: #737373;
           transition: color 0.3s ease;
           font-size: 14px;
+          padding: 4px; // Prevent movement when adding border
+          box-sizing: border-box;
 
           &:hover {
             color: #3c3c3c;
-            border: 1px solid #fad648;
+            outline: 1px solid #fad648; // Use outline instead of border
           }
 
           &:focus {
-            border: 0.75px solid #fad648;
+            outline: 0.75px solid #fad648;
           }
         }
       }
@@ -64,15 +66,16 @@
           color: #3c3c3c;
           transition: color 0.3s ease;
           font-size: 18px;
+          padding: 4px; // Consistent padding to avoid movement
+          box-sizing: border-box;
 
           &:hover {
             color: #000000;
-            padding: 4px;
-            border: 0.75px solid #3c3c3c;
+            outline: 0.75px solid #3c3c3c; // Outline avoids affecting size
           }
 
           &:focus {
-            border: 0.75px solid #3c3c3c;
+            outline: 0.75px solid #3c3c3c;
           }
         }
       }
