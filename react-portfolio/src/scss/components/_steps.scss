@@ -26,3 +26,22 @@
       &:last-child {
         margin-bottom: 40px; // Increase margin to push it up
       }
+      p:first-of-type {
+        font-size: 18px;
+        margin-bottom: 10px;
+        position: relative;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 70px;
+          height: 1px;
+          background-color: black;
+          margin: 10px auto 0;
+        }
+      }
+
+      p:last-of-type {
+        font-size: 16px;
+      }
+    }
