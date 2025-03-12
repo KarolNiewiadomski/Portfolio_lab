@@ -38,7 +38,6 @@
       gap: 20px;
 
       &:first-of-type {
-        // (Upper menu)
         margin-bottom: 15px;
 
         a {
@@ -51,7 +50,7 @@
 
           &:hover {
             color: #3c3c3c;
-            outline: 1px solid #fad648; // Use outline instead of border
+            outline: 1px solid #fad648;
           }
 
           &:focus {
@@ -61,7 +60,6 @@
       }
 
       &:last-of-type {
-        // (Lower menu)
         a {
           text-decoration: none;
           color: #3c3c3c;
@@ -72,7 +70,7 @@
 
           &:hover {
             color: #000000;
-            outline: 0.75px solid #3c3c3c; // Outline avoids affecting size
+            outline: 0.75px solid #3c3c3c;
           }
 
           &:focus {
