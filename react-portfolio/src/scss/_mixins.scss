@@ -1,0 +1,21 @@
+@mixin button-style {
+  border: 0.75px solid #3c3c3c;
+  width: 310px;
+  height: 120px;
+  padding: 13px 93px;
+  font-family: $font-base;
+  font-size: 36px;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    background-color: #dddddd;
+  }
+}

@@ -1,0 +1,48 @@
+@import "../colors";
+@import "../fonts";
+
+.three-columns-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  width: 100%;
+  gap: 20px;
+  background-color: #fad648;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    padding: 40px;
+    font-family: $font-base;
+    font-weight: 200;
+
+    h2 {
+      margin: 0;
+      padding-bottom: 10px;
+      color: #5e5322;
+      font-size: 90px;
+      font-weight: 200;
+    }
+
+    p {
+      margin: 15px 0;
+      font-size: 18px;
+      font-weight: 400;
+      color: #3c3c3c;
+    }
+
+    p:first-of-type {
+      text-transform: uppercase;
+    }
+
+    p:last-of-type {
+      font-weight: 300;
+      font-family: $font-alt;
+      font-size: 16px;
+      letter-spacing: -0.32px;
+    }
+  }
+}

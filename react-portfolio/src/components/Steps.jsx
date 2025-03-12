@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Decoration from "../Assets/Decoration.svg";
+
 const Steps = () => {
   return (
-    <section id="Steps">
+    <section id="Steps" className="steps-container">
       <div>
-        <h2>Just 4 easy steps</h2>
-        <img src="" alt="Fancy underline" />
+        <h2 className="steps-heading">Just 4 easy steps</h2>
+        <img src={Decoration} alt="Decoration" />
       </div>
 
-      <div>
+      <div className="steps-instruction">
         <div>
           <img src="" alt="T-shirt" />
           <p>Pick stuff</p>
@@ -33,8 +35,9 @@ const Steps = () => {
           <p>Order pickup</p>
           <p>Pickup will arrive on schedule</p>
         </div>
-        <Link to="/Login">Donate gifts</Link>
       </div>
+
+      <Link to="/Login">Donate gifts</Link>
     </section>
   );
 };
