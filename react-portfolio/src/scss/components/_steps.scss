@@ -11,9 +11,18 @@
         display: block;
         margin: 0 auto;
       }
-      
+
       div {
         text-align: center;
         position: relative;
         padding: 20px;
         font-family: "Open Sans", sans-serif;
+
+        
+      &:first-child {
+        margin-top: 40px; // Increase margin to push it down
+      }
+
+      &:last-child {
+        margin-bottom: 40px; // Increase margin to push it up
+      }
