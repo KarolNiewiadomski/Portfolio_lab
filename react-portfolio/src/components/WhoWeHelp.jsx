@@ -20,7 +20,7 @@ const WhoWeHelp = () => {
             natus soluta a dicta porro nemo ipsam repudiandae veritatis.
           </p>
           <ul>
-            <li>
+            <li className="Charities">
               <div>
                 <h2>Charity "Dbam o zdrowie"</h2>
                 <p>
@@ -30,6 +30,26 @@ const WhoWeHelp = () => {
               </div>
               <div>
                 <p>clothes, food, home appliences, toys</p>
+              </div>
+            </li>
+
+            <li className="Charities">
+              <div>
+                <h2>Charity "Dla dzieci"</h2>
+                <p>Goal and mission: Help kids from poor families.</p>
+              </div>
+              <div>
+                <p>clothes, home appliences, toys</p>
+              </div>
+            </li>
+
+            <li className="Charities">
+              <div>
+                <h2>Charity "Bez domu"</h2>
+                <p>Goal and mission: Help People.</p>
+              </div>
+              <div>
+                <p>clothes, home appliences, toys</p>
               </div>
             </li>
           </ul>
