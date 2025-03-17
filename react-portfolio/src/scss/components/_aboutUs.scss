@@ -30,3 +30,12 @@
         font-family: $font-base;
         font-weight: 400;
       }
+
+      p {
+        font-family: $font-base;
+        font-size: 2rem;
+        font-weight: 400;
+        max-width: 70%;
+        padding-top: 60px;
+        position: relative;
+      }
