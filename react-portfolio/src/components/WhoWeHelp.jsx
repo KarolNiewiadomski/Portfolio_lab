@@ -20,9 +20,18 @@ const WhoWeHelp = () => {
             natus soluta a dicta porro nemo ipsam repudiandae veritatis.
           </p>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <div>
+                <h2>Charity "Dbam o zdrowie"</h2>
+                <p>
+                  Goal and mission: Help people who are in difficult live
+                  situations.
+                </p>
+              </div>
+              <div>
+                <p>clothes, food, home appliences, toys</p>
+              </div>
+            </li>
           </ul>
           <a href="...">COMPONENT TO BE MADE AND TO PROPEGADE</a>
         </nav>
