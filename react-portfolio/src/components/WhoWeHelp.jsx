@@ -46,10 +46,10 @@ const WhoWeHelp = () => {
             <li className="Charities">
               <div>
                 <h2>Charity "Bez domu"</h2>
-                <p>Goal and mission: Help People.</p>
+                <p>Goal and mission: Help people without a home.</p>
               </div>
               <div>
-                <p>clothes, home appliences, toys</p>
+                <p>clothes, food, blankets</p>
               </div>
             </li>
           </ul>
