@@ -39,3 +39,10 @@
         padding-top: 60px;
         position: relative;
       }
+      
+      img[src*="Signature"] {
+        position: absolute;
+        right: 170px;
+        bottom: 100px;
+        width: 200px;
+      }
