@@ -1,18 +1,24 @@
 import React from "react";
+import Team from "../Assets/People.jpg";
+import Signature from "../Assets/Signature.svg";
+import Decoration from "../Assets/Decoration.svg";
 
 const AboutUs = () => {
   return (
-    <div id="AboutUs">
-      <div>
+    <div id="AboutUs" className="about-us">
+      <div className="about-us-left">
         <h2>About us</h2>
+        <img src={Decoration} alt="Decoration" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Reprehenderit architecto eaque porro eveniet tenetur nemo nisi.
-          Blanditiis quis consequatur quos qui ut. Eveniet, porro. Incidunt
-          repellat porro inventore commodi animi.
+          Nori grape silver beet broccoli kombu beet greens fava bean potato
+          quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+          turnip greens parsnip.
         </p>
+        <img src={Signature} alt="signature" />
       </div>
-      <img src="#" alt="Group of people" />
+      <div className="about-us-right">
+        <img src={Team} alt="Group of people" />
+      </div>
     </div>
   );
 };
