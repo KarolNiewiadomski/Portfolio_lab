@@ -1,11 +1,12 @@
 import React from "react";
+import Decoration from "../Assets/Decoration.svg";
 
 const WhoWeHelp = () => {
   return (
     <section id="FO">
       <div>
         <span>Who we help?</span>
-        <img src="#" alt="fancy underline" />
+        <img src={Decoration} alt="fancy underline" />
       </div>
 
       <div>
@@ -16,8 +17,7 @@ const WhoWeHelp = () => {
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
             optio placeat minus beatae molestiae possimus repellendus. Nihil
-            natus soluta a dicta porro nemo ipsam repudiandae veritatis id,
-            corrupti aspernatur debitis?
+            natus soluta a dicta porro nemo ipsam repudiandae veritatis.
           </p>
           <ul>
             <li></li>
