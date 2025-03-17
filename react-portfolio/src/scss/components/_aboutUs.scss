@@ -1,48 +1,56 @@
 @import "../colors";
 @import "../fonts";
 
-
 .about-us {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  .about-us-left,
+  .about-us-right {
+    width: 50%;
     display: flex;
-    width: 100%;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .about-us-left,
-    .about-us-right {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .about-us-left {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    background-color: #f0f1f1;
+  }
+
+  h2 {
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: $font-base;
+    font-weight: 400;
+  }
+
+  p {
+    font-family: $font-base;
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 70%;
+    padding-top: 60px;
+    position: relative;
+  }
+
+  img[src*="Signature"] {
+    position: absolute;
+    right: 170px;
+    bottom: 100px;
+    width: 200px;
+  }
+
+  .about-us-right {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
-    .about-us-left {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem;
-        position: relative;
-        background-color: #f0f1f1;
-      }
-
-      h2 {
-        position: relative;
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        font-family: $font-base;
-        font-weight: 400;
-      }
-
-      p {
-        font-family: $font-base;
-        font-size: 2rem;
-        font-weight: 400;
-        max-width: 70%;
-        padding-top: 60px;
-        position: relative;
-      }
-      
-      img[src*="Signature"] {
-        position: absolute;
-        right: 170px;
-        bottom: 100px;
-        width: 200px;
-      }
+  }
+}
