@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Decoration from "../Assets/Decoration.svg";
 
 const WhoWeHelp = () => {
-  const [activeCategory, setActiveCategory] = useState("Charities");
-
   return (
     <section id="FO" className="who-we-help">
       <div>
