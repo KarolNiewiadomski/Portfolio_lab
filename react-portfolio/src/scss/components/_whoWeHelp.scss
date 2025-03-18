@@ -25,6 +25,7 @@
   margin-top: 10px;
 }
 
+/* Button group for horizontal alignment */
 .button-group {
   display: flex;
   justify-content: center;
@@ -37,19 +38,10 @@
   width: auto;
   padding: 13px 30px;
   height: auto;
-  border: 0;
+  border: none; // Remove default border
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  max-width: 600px;
-  margin: auto;
-}
-
-li {
-  font-family: $font-alt;
-  border-bottom: 1px solid black;
-  padding: 10px 0;
+/* Active button state */
+.button-group button.active {
+  border: 1px solid black; // Adds black border when active
 }
