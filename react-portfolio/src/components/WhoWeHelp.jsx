@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Decoration from "../Assets/Decoration.svg";
 
 const WhoWeHelp = () => {
+  const [activeCategory, setActiveCategory] = useState("Charities");
   return (
     <section id="FO" className="who-we-help">
       <div>
@@ -11,15 +12,9 @@ const WhoWeHelp = () => {
 
       <div>
         <div className="button-group">
-          {["Charities", "Non-profit", "Local"].map((category) => (
-            <button
-              key={category}
-              className={activeCategory === category ? "active" : ""}
-              onClick={() => setActiveCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
+          <button>Charities</button>
+          <button>Non-profit</button>
+          <button>Local</button>
         </div>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
