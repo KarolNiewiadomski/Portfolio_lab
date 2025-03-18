@@ -12,9 +12,15 @@ const WhoWeHelp = () => {
 
       <div>
         <div className="button-group">
-          <button>Charities</button>
-          <button>Non-profit</button>
-          <button>Local</button>
+          {["Charities", "Non-profit", "Local"].map((category) => (
+            <button
+              key={category}
+              className={activeCategory === category ? "active" : ""}
+              onClick={() => setActiveCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
         </div>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
