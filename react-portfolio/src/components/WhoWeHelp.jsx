@@ -3,7 +3,7 @@ import Decoration from "../Assets/Decoration.svg";
 
 const WhoWeHelp = () => {
   return (
-    <section id="FO">
+    <section id="FO" className="who-we-help">
       <div>
         <span>Who we help?</span>
         <img src={Decoration} alt="fancy underline" />
