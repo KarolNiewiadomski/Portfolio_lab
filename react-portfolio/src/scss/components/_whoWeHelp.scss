@@ -1,2 +1,55 @@
 @import "../mixins";
 @import "../fonts";
+
+.who-we-help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: $font-base;
+}
+
+.who-we-help > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.who-we-help > div:first-child span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.who-we-help > div:first-child img {
+  margin-top: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  @include button-style;
+  width: auto;
+  padding: 13px 30px;
+  height: auto;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+
+li {
+  font-family: $font-alt;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+}
