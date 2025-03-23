@@ -157,12 +157,6 @@ const WhoWeHelp = () => {
     startIndex + itemsPerPage
   );
 
-  // Handle page changes
-  const goToPreviousPage = () =>
-    setCurrentPage((prev) => Math.max(prev - 1, 1));
-  const goToNextPage = () =>
-    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-
   return (
     <section id="FO" className="who-we-help">
       <div>
@@ -201,6 +195,21 @@ const WhoWeHelp = () => {
             </li>
           ))}
         </ul>
+
+        {/* Pagination Buttons */}
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+            (pageNum) => (
+              <button
+                key={pageNum}
+                className={currentPage === pageNum ? "active" : ""}
+                onClick={() => setCurrentPage(pageNum)}
+              >
+                {pageNum}
+              </button>
+            )
+          )}
+        </div>
       </div>
     </section>
   );
