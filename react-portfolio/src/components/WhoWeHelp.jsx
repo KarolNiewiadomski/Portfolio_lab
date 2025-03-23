@@ -3,6 +3,8 @@ import Decoration from "../Assets/Decoration.svg";
 
 const WhoWeHelp = () => {
   const [activeCategory, setActiveCategory] = useState("Charities");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
 
   return (
     <section id="FO" className="who-we-help">
