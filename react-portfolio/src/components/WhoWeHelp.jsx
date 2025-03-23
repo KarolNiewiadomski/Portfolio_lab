@@ -7,10 +7,161 @@ const WhoWeHelp = () => {
   const itemsPerPage = 3;
 
   const data = {
-    Charities: [],
-    "Non-profit": [],
-    Local: [],
+    Charities: [
+      {
+        name: "Charity 'Dbam o zdrowie'",
+        mission: "Help people in need",
+        items: "clothes, food, toys",
+      },
+      {
+        name: "Charity 'Dla dzieci'",
+        mission: "Help kids from poor families",
+        items: "clothes, toys",
+      },
+      {
+        name: "Charity 'Bez domu'",
+        mission: "Help the homeless",
+        items: "clothes, food, blankets",
+      },
+      {
+        name: "Charity 'Education First'",
+        mission: "Support education",
+        items: "books, school supplies",
+      },
+      {
+        name: "Charity 'Dbam o zdrowie'",
+        mission: "Help people in need",
+        items: "clothes, food, toys",
+      },
+      {
+        name: "Charity 'Dla dzieci'",
+        mission: "Help kids from poor families",
+        items: "clothes, toys",
+      },
+      {
+        name: "Charity 'Bez domu'",
+        mission: "Help the homeless",
+        items: "clothes, food, blankets",
+      },
+      {
+        name: "Charity 'Education First'",
+        mission: "Support education",
+        items: "books, school supplies",
+      },
+      {
+        name: "Charity 'Education First'",
+        mission: "Support education",
+        items: "books, school supplies",
+      },
+    ],
+
+    "Non-profit": [
+      {
+        name: "Non-profit 'Green World'",
+        mission: "Environmental Protection",
+        items: "eco products, funds",
+      },
+      {
+        name: "Non-profit 'Health First'",
+        mission: "Medical aid",
+        items: "medicine, funding",
+      },
+      {
+        name: "Non-profit 'Animal Rescue'",
+        mission: "Animal welfare",
+        items: "food, shelter supplies",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+    ],
+
+    Local: [
+      {
+        name: "Local 'Help the Elderly'",
+        mission: "Elderly care",
+        items: "home visits, medical aid",
+      },
+      {
+        name: "Local 'Food Bank'",
+        mission: "Fight hunger",
+        items: "food donations",
+      },
+      {
+        name: "Local 'Youth Program'",
+        mission: "Support young people",
+        items: "education, mentorship",
+      },
+      {
+        name: "Local 'Art for All'",
+        mission: "Promote art",
+        items: "art supplies, workshops",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+      {
+        name: "Non-profit 'Community Care'",
+        mission: "Support local communities",
+        items: "clothing, food",
+      },
+    ],
   };
+
+  const categoryData = data[activeCategory] || [];
+  const totalPages = Math.ceil(categoryData.length / itemsPerPage);
+
+  // Get items for current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const displayedItems = categoryData.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  // Handle page changes
+  const goToPreviousPage = () =>
+    setCurrentPage((prev) => Math.max(prev - 1, 1));
+  const goToNextPage = () =>
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
 
   return (
     <section id="FO" className="who-we-help">
@@ -19,253 +170,38 @@ const WhoWeHelp = () => {
         <img src={Decoration} alt="fancy underline" />
       </div>
 
+      {/* Category Buttons */}
       <div>
         <div className="button-group">
-          {["Charities", "Non-profit", "Local"].map((category) => (
+          {Object.keys(data).map((category) => (
             <button
               key={category}
               className={activeCategory === category ? "active" : ""}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                setCurrentPage(1); // Reset to first page on category change
+              }}
             >
               {category}
             </button>
           ))}
         </div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
-          optio placeat minus beatae molestiae possimus repellendus. Nihil natus
-          soluta a dicta porro nemo ipsam repudiandae veritatis.
-        </p>
 
-        {activeCategory === "Charities" && (
-          <ul className="charity-list">
-            <li className="charities">
+        List Display
+        <ul className="category-list">
+          {displayedItems.map((item, index) => (
+            <li key={index} className={activeCategory.toLowerCase()}>
               <div>
-                <h2>Charity "Dbam o zdrowie"</h2>
-                <p>
-                  Goal and mission: Help people who are in difficult live
-                  situations.
-                </p>
+                <h2>{item.name}</h2>
+                <p>Goal and mission: {item.mission}</p>
               </div>
               <div>
-                <p>clothes, food, home appliences, toys</p>
+                <p>{item.items}</p>
               </div>
             </li>
+          ))}
+        </ul>
 
-            <li className="charities">
-              <div>
-                <h2>Charity "Dla dzieci"</h2>
-                <p>Goal and mission: Help kids from poor families.</p>
-              </div>
-              <div>
-                <p>clothes, home appliences, toys</p>
-              </div>
-            </li>
-
-            <li className="charities">
-              <div>
-                <h2>Charity "Bez domu"</h2>
-                <p>Goal and mission: Help people without a home.</p>
-              </div>
-              <div>
-                <p>clothes, food, blankets</p>
-              </div>
-            </li>
-
-            <li className="charities">
-              <div>
-                <h2>Charity "Dbam o zdrowie"</h2>
-                <p>
-                  Goal and mission: Help people who are in difficult live
-                  situations.
-                </p>
-              </div>
-              <div>
-                <p>clothes, food, home appliences, toys</p>
-              </div>
-            </li>
-
-            <li className="charities">
-              <div>
-                <h2>Charity "Dla dzieci"</h2>
-                <p>Goal and mission: Help kids from poor families.</p>
-              </div>
-              <div>
-                <p>clothes, home appliences, toys</p>
-              </div>
-            </li>
-
-            <li className="charities">
-              <div>
-                <h2>Charity "Bez domu"</h2>
-                <p>Goal and mission: Help people without a home.</p>
-              </div>
-              <div>
-                <p>clothes, food, blankets</p>
-              </div>
-            </li>
-
-            <li className="charities">
-              <div>
-                <h2>Charity "Dbam o zdrowie"</h2>
-                <p>
-                  Goal and mission: Help people who are in difficult live
-                  situations.
-                </p>
-              </div>
-              <div>
-                <p>clothes, food, home appliences, toys</p>
-              </div>
-            </li>
-
-            <li className="charities">
-              <div>
-                <h2>Charity "Dla dzieci"</h2>
-                <p>Goal and mission: Help kids from poor families.</p>
-              </div>
-              <div>
-                <p>clothes, home appliences, toys</p>
-              </div>
-            </li>
-
-            <li className="charities">
-              <div>
-                <h2>Charity "Bez domu"</h2>
-                <p>Goal and mission: Help people without a home.</p>
-              </div>
-              <div>
-                <p>clothes, food, blankets</p>
-              </div>
-            </li>
-          </ul>
-        )}
-
-        {activeCategory === "Non-profit" && (
-          <ul className="non-profit-list">
-            <li className="non-profit">
-              <div>
-                <h2>Non-profit</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-
-            <li className="non-profit">
-              <div>
-                <h2>Non-profit</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-
-            <li className="non-profit">
-              <div>
-                <h2>Non-profit</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-
-            <li className="non-profit">
-              <div>
-                <h2>Non-profit</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-
-            <li className="non-profit">
-              <div>
-                <h2>Non-profit</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-
-            <li className="non-profit">
-              <div>
-                <h2>Non-profit</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-          </ul>
-        )}
-
-        {activeCategory === "Local" && (
-          <ul className="local-lsit">
-            <li className="local">
-              <div>
-                <h2>Local</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-
-            <li className="local">
-              <div>
-                <h2>Local</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-
-            <li className="local">
-              <div>
-                <h2>Local</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Temporibus, unde consequatur.
-                </p>
-              </div>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </li>
-          </ul>
-        )}
-      </div>
-    </section>
   );
 };
 
