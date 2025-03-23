@@ -187,7 +187,7 @@ const WhoWeHelp = () => {
           ))}
         </div>
 
-        List Display
+        {/* List Display
         <ul className="category-list">
           {displayedItems.map((item, index) => (
             <li key={index} className={activeCategory.toLowerCase()}>
@@ -200,7 +200,7 @@ const WhoWeHelp = () => {
               </div>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
   );
 };
