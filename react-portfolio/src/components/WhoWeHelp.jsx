@@ -6,6 +6,12 @@ const WhoWeHelp = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
 
+  const data = {
+    Charities: [],
+    "Non-profit": [],
+    Local: [],
+  };
+
   return (
     <section id="FO" className="who-we-help">
       <div>
