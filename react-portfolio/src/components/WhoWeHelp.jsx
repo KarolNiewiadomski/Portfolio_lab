@@ -9,47 +9,47 @@ const WhoWeHelp = () => {
   const data = {
     Charities: [
       {
-        name: "Charity 'Dbam o zdrowie'",
+        name: "Lorem ipsum dolor",
         mission: "Help people in need",
         items: "clothes, food, toys",
       },
       {
-        name: "Charity 'Dla dzieci'",
+        name: "Lorem ipsum dolor",
         mission: "Help kids from poor families",
         items: "clothes, toys",
       },
       {
-        name: "Charity 'Bez domu'",
+        name: "Lorem ipsum dolor",
         mission: "Help the homeless",
         items: "clothes, food, blankets",
       },
       {
-        name: "Charity 'Education First'",
+        name: "Lorem ipsum dolor",
         mission: "Support education",
         items: "books, school supplies",
       },
       {
-        name: "Charity 'Dbam o zdrowie'",
+        name: "Lorem ipsum dolor",
         mission: "Help people in need",
         items: "clothes, food, toys",
       },
       {
-        name: "Charity 'Dla dzieci'",
+        name: "Lorem ipsum dolor",
         mission: "Help kids from poor families",
         items: "clothes, toys",
       },
       {
-        name: "Charity 'Bez domu'",
+        name: "Lorem ipsum dolor",
         mission: "Help the homeless",
         items: "clothes, food, blankets",
       },
       {
-        name: "Charity 'Education First'",
+        name: "Lorem ipsum dolor",
         mission: "Support education",
         items: "books, school supplies",
       },
       {
-        name: "Charity 'Education First'",
+        name: "Lorem ipsum dolor",
         mission: "Support education",
         items: "books, school supplies",
       },
@@ -57,32 +57,32 @@ const WhoWeHelp = () => {
 
     "Non-profit": [
       {
-        name: "Non-profit 'Green World'",
+        name: "Lorem ipsum dolor",
         mission: "Environmental Protection",
         items: "eco products, funds",
       },
       {
-        name: "Non-profit 'Health First'",
+        name: "Lorem ipsum dolor",
         mission: "Medical aid",
         items: "medicine, funding",
       },
       {
-        name: "Non-profit 'Animal Rescue'",
+        name: "Lorem ipsum dolor",
         mission: "Animal welfare",
         items: "food, shelter supplies",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
@@ -90,57 +90,57 @@ const WhoWeHelp = () => {
 
     Local: [
       {
-        name: "Local 'Help the Elderly'",
+        name: "Lorem ipsum dolor",
         mission: "Elderly care",
         items: "home visits, medical aid",
       },
       {
-        name: "Local 'Food Bank'",
+        name: "Lorem ipsum dolor",
         mission: "Fight hunger",
         items: "food donations",
       },
       {
-        name: "Local 'Youth Program'",
+        name: "Lorem ipsum dolor",
         mission: "Support young people",
         items: "education, mentorship",
       },
       {
-        name: "Local 'Art for All'",
+        name: "Lorem ipsum dolor",
         mission: "Promote art",
         items: "art supplies, workshops",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
       {
-        name: "Non-profit 'Community Care'",
+        name: "Lorem ipsum dolor",
         mission: "Support local communities",
         items: "clothing, food",
       },
@@ -181,15 +181,20 @@ const WhoWeHelp = () => {
           ))}
         </div>
 
+        {/* Short description To be ADDED*/}
+
         {/* List Display */}
         <ul className="category-list">
           {displayedItems.map((item, index) => (
-            <li key={index} className={activeCategory.toLowerCase()}>
-              <div>
+            <li
+              key={index}
+              className={`category-item ${activeCategory.toLowerCase()}`}
+            >
+              <div className="left-content">
                 <h2>{item.name}</h2>
                 <p>Goal and mission: {item.mission}</p>
               </div>
-              <div>
+              <div className="right-content">
                 <p>{item.items}</p>
               </div>
             </li>

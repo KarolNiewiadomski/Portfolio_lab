@@ -18,7 +18,10 @@
 
 .who-we-help > div:first-child span {
   font-size: 2rem;
-  font-weight: bold;
+  font-family: $font-base;
+  font-weight: 500;
+  color: #3c3c3c;
+  margin: 70px 0 10px 0;
 }
 
 .who-we-help > div:first-child img {
@@ -29,19 +32,79 @@
 .button-group {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 80px;
   flex-wrap: wrap;
 }
 
 .button-group button {
   @include button-style;
-  width: auto;
   padding: 13px 30px;
   height: auto;
+  width: auto;
   border: none; // Remove default border
+  color: #3c3c3c;
+  margin: 30px 30px 10px 30px;
+  text-transform: none;
 }
 
 /* Active button state */
 .button-group button.active {
-  border: 1px solid black; // Adds black border when active
+  border: 1px solid #3c3c3c; // Adds black border when active
+}
+
+.category-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 100px 0 0 0;
+  width: 1100px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #3c3c3c;
+  padding-bottom: 1rem;
+  font-family: $font-alt;
+}
+
+.left-content {
+  flex: 1;
+  text-align: left;
+  font-size: 18;
+  & h2 {
+    font-weight: 200;
+    font-size: 26;
+  }
+}
+
+.right-content {
+  flex: 1;
+  text-align: right;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.pagination button {
+  background: white;
+  border: none; /* No border by default */
+  color: #3c3c3c;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.pagination button:hover {
+  background: #f0f0f0;
+}
+
+.pagination button.active {
+  border: 1px solid #3c3c3c; /* Border only for active */
+  color: #3c3c3c;
 }
